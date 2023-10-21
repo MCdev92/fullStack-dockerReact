@@ -5,10 +5,10 @@ The personal recipe page is a full-stack web application built on Python. This a
 ## Installation 🏗️
 
 ### Prerequisites
-* Python 3.7+
-* FastApi
-* React
-* Docker
+* Python 3.7+ --> https://www.python.org/downloads/
+* FastApi --> https://fastapi.tiangolo.com/
+* React --> https://react.dev/learn/installation
+* Docker --> https://docs.docker.com/engine/install/
 
 ### Setup
 1. Clone the repo
