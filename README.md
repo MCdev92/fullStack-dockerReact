@@ -20,7 +20,9 @@ The personal recipe page is a full-stack web application built on Python. This a
     `react App.js` (frontend)
 4. Headover to the webroswer and take a look at the delicious display recipes! [localhost:3000] (http://localhost:3000/)
 
-## ![walkthrough](recipePage.gif)
+## Walkthrough/Demo
+
+![walkthrough](recipePage.gif)
          
 
 
