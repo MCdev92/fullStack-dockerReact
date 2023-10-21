@@ -11,7 +11,7 @@ function App() {
   }, []);
 
   return recipe.map((r, index)=> {
-    return <p key={index}>{r.id} {r.title} {r.instructions} </p>
+    return <p key={index}>{r.id} {r.title} {r.ingredients} </p>
   })
     
 
