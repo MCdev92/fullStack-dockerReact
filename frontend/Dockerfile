@@ -3,7 +3,8 @@ WORKDIR /app
 COPY package*.json /app
 
 RUN npm i --silent
-RUN npm -g react-scripts@5.0.0
+# this is used for development puroses only, great for testing!
+RUN npm i -g react-scripts@5.0.0 
 
 COPY . ./
 
