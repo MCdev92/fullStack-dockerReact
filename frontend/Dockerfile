@@ -1,0 +1,8 @@
+FROM node:17-alpine
+WORKDIR /app
+COPY package*.json /app
+
+RUN npm i --silent
+RUN npm -g react-scripts@5.0.0
+
+CMD [ "npm", "start" ]
