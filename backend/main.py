@@ -28,15 +28,15 @@ app.add_middleware(
 
 # Define your Recipe class
 class RecipeBase(BaseModel):
-       title = str
-       ingredients = str
-       directions = str
+       title: str
+       ingredients: str
+       directions: str
 
 class RecipeModel(RecipeBase):
     id: int
     
     class Config:
-        orm_mode = True
+       orm_mode = True
 
 # Database dependencies.
 # get_db (dependencies injection), try create a db connection or close the db 
@@ -56,7 +56,7 @@ models.Base.metadata.create_all(bind=engine)
 # based on everything on recipe base, all variables are mapped from recipe base to table recipe into sqlite db
 @app.post("/recipes/", response_model=RecipeModel)
 async def create_recipe(recipe: RecipeBase, db: db_dependency):
-    db_recipe = models.Transaction(**recipe.dict())
+    db_recipe = models.Recipes(**recipe.dict())
     db.add(db_recipe)
     db.commit()
     db.refresh(db_recipe)
@@ -66,6 +66,6 @@ async def create_recipe(recipe: RecipeBase, db: db_dependency):
 # query parameter to allow us to fetch a certain amount of recipes
 @app.get("/recipes/", response_model = List[RecipeModel])
 async def read_recipes(db: db_dependency, skip: int = 0, limit: int = 100):
-    recipes = db.query(models.recipes).offset(skip).limit(limit).all()
+    recipes = db.query(models.Recipes).offset(skip).limit(limit).all()
     return recipes
 

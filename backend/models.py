@@ -1,7 +1,7 @@
 from database import Base
-from sqlalchemy import Column, Integer, String, Float
+from sqlalchemy import Column, Integer, String
 
-class Transaction(Base):
+class Recipes(Base):
     __tablename__ = 'recipes'
     
     id = Column(Integer, primary_key=True, index=True)
