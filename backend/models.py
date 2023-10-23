@@ -5,6 +5,6 @@ class Transaction(Base):
     __tablename__ = 'recipes'
     
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(Float)
+    title = Column(String)
     ingredients = Column(String)
     directions = Column(String)
