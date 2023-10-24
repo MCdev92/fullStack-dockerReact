@@ -22,7 +22,7 @@ The personal recipe page is a full-stack web application built on Python. This a
 
 ## Walkthrough/Demo
 
-![walkthrough](recipe-webapp.gif)
+![walkthrough](fs-recipe.gif)
          
 
 
