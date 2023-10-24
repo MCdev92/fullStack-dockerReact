@@ -37,5 +37,5 @@
     ]
   },
   "_comment1": "proxy added, development purposes only, not production",
-  "proxy": "http://localhost:8000"
+  "proxy": "http://backend:8000"
 }
